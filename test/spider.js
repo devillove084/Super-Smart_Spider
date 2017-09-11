@@ -10,11 +10,19 @@ const c = new Crawler({
 			let $ = cheerio.load(res.body)
 			//console.log($('div').find('class').find());
 			let a = $('.yq-main').children().prev().html();
-			let b = $(a).children().prevAll().html();
-			console.log(b);
+			let b = $(a).children().prevAll();
+			//console.log(b[0]);
+			let num = b.length;
+			//console.log(num);
+			for (let i = 0;i< num ;i++){
+				let p = b[i].parent;
+				console.log(p);
+			}
 		}
 		done();
 	}
 });
 
 c.queue('https://yq.aliyun.com/articles/type_all?spm=5176.100239.bloglist.4.FSyfaX');
+
+
