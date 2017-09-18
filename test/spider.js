@@ -15,7 +15,7 @@ const c = new Crawler({
 			let num = b.length;
 			//console.log(num);
 			for (let i = 0;i< num ;i++){
-				let p = b[i].parent;
+				let p = b[i].attribs;
 				console.log(p);
 			}
 		}
