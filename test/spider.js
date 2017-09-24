@@ -9,15 +9,17 @@ const c = new Crawler({
 		}else{
 			let $ = cheerio.load(res.body)
 			//console.log($('div').find('class').find());
-			let a = $('.yq-main').children().prev().html();
-			let b = $(a).children().prevAll();
+			let a = $('.yq-main');
+			console.log(a);
+			//.children().prev().html();
+			//let b = $(a).children().prevAll();
 			//console.log(b[0]);
-			let num = b.length;
+			//let num = b.length;
 			//console.log(num);
-			for (let i = 0;i< num ;i++){
-				let p = b[i].attribs;
-				console.log(p);
-			}
+			//for (let i = 0;i< num ;i++){
+			//	let p = b[i].attribs;
+			//	console.log(p);
+			//}
 		}
 		done();
 	}
