@@ -14,7 +14,7 @@ function getInfo(url){
 	request(url,function(err,res,body){
 		if (err) console.log(err);
 		var obj = cheerio.load(body);
-		console.log(obj); //Must parse html over here!!!
+		console.log(obj.html()); //Must parse html over here!!!
 	});
 }
 
