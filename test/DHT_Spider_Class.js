@@ -8,6 +8,7 @@ const dhtc = new dhtcrypto();
 
 
 const BOOTSTRAP_NODES = [
+	['dht.transmissionbt.com',6881],
 	['router.bittorrent.com', 6881],
 	['dht.transmissionbt.com', 6881]
 ];
